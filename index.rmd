@@ -1,5 +1,5 @@
 ---
-title: "MTurk API Technographic Walkthrough and Infrastructure Inversion (title change to course title)"
+title: "MTurk API Technographic Walkthrough and Infrastructure Inversion"
 author: "Yelyzaveta Terentieva (13352393) Onni Qi (14558521)"
 date: "09-26-'25"
 output: html_document
@@ -184,9 +184,9 @@ add screenshots here, for the doc, MTurk interface, side by side
 
 sources: [Implementing Amazon Mechanical Turk](https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMechanicalTurkGettingStartedGuide/NextSteps.html#advanced-functionality); [blog.mturk.com](https://blog.mturk.com/helpful-tips-for-choosing-the-right-mechanical-turk-interface-d4c2c84d58e9) 
 
-## Roadmap Diagram
+## Roadmap Diagrams
 
-### What requesters can do with MTurk APIs (Visualization) 
+### What requesters can do with MTurk APIs (Table Chart Visualization)
 
 <style>
   table {
@@ -423,6 +423,9 @@ sources: [Implementing Amazon Mechanical Turk](https://docs.aws.amazon.com/AWSMe
   </tbody>
 </table>
 
+### API Categories (Mindmap Visualization)
+
+<img src="/Users/olenonniboi/Desktop/p6.png" width="1000" />
 
 # Infrastructural Inversion 
 
