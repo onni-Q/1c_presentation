@@ -449,8 +449,9 @@ Should the state interfere? If so, to what extent and in what way?
 
 add gifs 
 <div style="text-align: center; margin: 40px 0;">
-  <img src="images/monkey.gif" width="400" alt="Monkey listening to music gif" />
+  <img src="images/monkey.gif" width="250" alt="Monkey listening to music gif" />
 </div>
+
 
 
 
