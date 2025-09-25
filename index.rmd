@@ -7,6 +7,11 @@ output: html_document
 
 <span style="font-size: 1.5em">Critical Perspectives on Data & AI – Methods</span>
 
+<div style="text-align: center; margin-top: 50px; margin-bottom: 10px;">
+  <img src="/Users/olenonniboi/Desktop/p5.png" width="200" />
+</div>
+
+
 <br><br>
 
 
