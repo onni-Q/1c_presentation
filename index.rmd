@@ -1,6 +1,6 @@
 ---
-title: "1c_Presentation"
-author: "onni"
+title: "MTurk Technographic Walkthrough and Infrastructure Inversion "
+author: "Yelyzaveta Terentieva 13352393 Onni Qi 14558521"
 date: "2025-09-26"
 output: html_document
 ---
@@ -11,4 +11,17 @@ body {
 }
 </style>
 
-# Your content here
+
+# Amazon Mturk API Walkthrough
+
+### CLI, RUI, and API
+
+<sj>
+
+### Comparison -- Why API is the best
+
+### What requesters can do with MTurk APIs
+
+# Infrastructural Inversion 
+
+# Discussion 
