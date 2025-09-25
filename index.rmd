@@ -1,9 +1,14 @@
 ---
-title: "MTurk Technographic Walkthrough and Infrastructure Inversion (title change to course title)"
-author: "Yelyzaveta Terentieva 13352393 Onni Qi 14558521"
-date: "2025-09-26"
+title: "MTurk API Technographic Walkthrough and Infrastructure Inversion (title change to course title)"
+author: "Yelyzaveta Terentieva (13352393) Onni Qi (14558521)"
+date: "09-26-'25"
 output: html_document
 ---
+
+<span style="font-size: 1.5em">Critical Perspectives on Data & AI – Methods</span>
+
+<br><br>
+
 
 <style>
 body {
@@ -35,7 +40,7 @@ table {
   margin-top: 20px;
   margin-bottom: 30px;
   background-color: #fffaf5; /* Slight contrast to body */
-  font-size: 14px;
+  font-size: 16px;
   border: 1px solid #e0dcd3;
 }
 
@@ -64,60 +69,125 @@ th {
 
 # Amazon Mturk API Walkthrough
 
-### Introduction 
+## Introduction 
+<div style="font-size: 1.25em;">
 Amazon Mechanical Turk (AMT) is a well-known example of a multi-sided crowdsourcing platform that acts as a matchmaker, as described by Evans and Schmalensee (2017). It connects requesters, who post microtasks, “small, atomic tasks that workers can complete in their web browser”, with workers who complete them, while Amazon earns a commission on each transaction (AMT 2025).
+</div>
+
+<div style="display: flex; justify-content: center; gap: 100px; align-items: center; margin-top: 50px; margin-bottom: 50px;">
+  <img src="/Users/olenonniboi/Desktop/p1.png" width="400" />
+  <img src="/Users/olenonniboi/Desktop/p2.png" width="400" />
+</div>
+
+
+
 
 add screenshots here, for the doc, MTurk interface, side by side
 
-### CLI, RUI, and API
+## CLI, RUI, and API
 
 
-#### Comparison -- Why API is the best
-| **Feature / Tool**               | **RUI (Requester User Interface)**       | **CLI (Command Line Interface)**        | **API (Application Programming Interface)**            |
-| -------------------------------- | ----------------------------- | --------------------------------------- | ------------------------------------------- |
-| What it is                   | Web-based UI on MTurk website | Command-line tool (Python/Java)         | RESTful web service (HTTP-based)            |
-| Skill level                  | Beginner-friendly             | Intermediate (terminal + scripts)       | Advanced (coding experience needed)         |
-| Setup                        | No setup needed               | Requires installation & config          | Requires API key, SDK, or manual HTTP       |
-| Task creation                | Manual via form               | Semi-automated (scripts)                | **Fully automated**                   |
-| Batch size                   | Small to moderate             | Moderate to large                       | **Large-scale**                |
-| Worker qualifications        | Point-and-click setup         | Via XML/JSON files                      | **Full control via code**                       |
-| Bonuses & approvals          | Manual                        | Batch scripts                           | **Fully automated**                             |
-| Monitoring / tracking        | Visual dashboard              | CSV output                              | **Real-time** logs & custom dashboards          |
-| Integration with other tools | Low                           | Medium  | High (connect to databases, web apps, etc.) |
-| Best for                     | Casual users, small studies   | Researchers with scripting needs        | Power users, data scientists, developers    |
+### Comparison -- Why we focus on API
+
+<style>
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    word-wrap: break-word;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: left;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature / Tool</th>
+      <th>RUI (Requester User Interface)</th>
+      <th>CLI (Command Line Interface)</th>
+      <th>API (Application Programming Interface)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>What it is</td>
+      <td>Web-based UI on MTurk website</td>
+      <td>Command-line tool (Python/Java)</td>
+      <td>RESTful web service (HTTP-based)</td>
+    </tr>
+    <tr>
+      <td>Skill level</td>
+      <td>Beginner-friendly</td>
+      <td>Intermediate (terminal + scripts)</td>
+      <td>Advanced (coding experience needed)</td>
+    </tr>
+    <tr>
+      <td>Setup</td>
+      <td>No setup needed</td>
+      <td>Requires installation &amp; config</td>
+      <td>Requires API key, SDK, or manual HTTP</td>
+    </tr>
+    <tr>
+      <td>Task creation</td>
+      <td>Manual via form</td>
+      <td>Semi-automated (scripts)</td>
+      <td><strong>Fully automated</strong></td>
+    </tr>
+    <tr>
+      <td>Batch size</td>
+      <td>Small to moderate</td>
+      <td>Moderate to large</td>
+      <td><strong>Large-scale</strong></td>
+    </tr>
+    <tr>
+      <td>Worker qualifications</td>
+      <td>Point-and-click setup</td>
+      <td>Via XML/JSON files</td>
+      <td><strong>Full control via code</strong></td>
+    </tr>
+    <tr>
+      <td>Bonuses &amp; approvals</td>
+      <td>Manual</td>
+      <td>Batch scripts</td>
+      <td><strong>Fully automated</strong></td>
+    </tr>
+    <tr>
+      <td>Monitoring / tracking</td>
+      <td>Visual dashboard</td>
+      <td>CSV output</td>
+      <td><strong>Real-time logs &amp; custom dashboards</strong></td>
+    </tr>
+    <tr>
+      <td>Integration with other tools</td>
+      <td>Low</td>
+      <td>Medium</td>
+      <td><strong>High (connect to databases, web apps, etc.)</strong></td>
+    </tr>
+    <tr>
+      <td>Best for</td>
+      <td>Casual users, small studies</td>
+      <td>Researchers with scripting needs</td>
+      <td>Power users, data scientists, developers</td>
+    </tr>
+  </tbody>
+</table>
+
 
 sources: [Implementing Amazon Mechanical Turk](https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMechanicalTurkGettingStartedGuide/NextSteps.html#advanced-functionality); [blog.mturk.com](https://blog.mturk.com/helpful-tips-for-choosing-the-right-mechanical-turk-interface-d4c2c84d58e9) 
 
+## Roadmap Diagram
 
 ### What requesters can do with MTurk APIs (Visualization) 
 
-## Roadmap Diagram
-
-```mermaid
-graph TD
-  A[Setup] --> B[Development]
-  B --> C[Launch]
-  C --> D[Monitoring]
-  D --> E[Analysis]
-``` 
-
-
-# Infrastructural Inversion 
-warning screenshot, soup to rest 
-
-put together a paragragh here 
-
-# Discussion 
-
-Platforms such as AMT, as part of the larger Amazon ecosystem, can enforce their own rules on complementors whenever a regulatory issue arises.
-
-Should the state interfere? If so, to what extent and in what way?
-
-add gifs 
-
-# references 
- 
-# table chart 
 <style>
   table {
     width: 100%;
@@ -352,3 +422,36 @@ add gifs
     </tr>
   </tbody>
 </table>
+
+
+# Infrastructural Inversion 
+
+warning screenshot, soup to rest 
+
+<div style="display: flex; justify-content: center; gap: 100px; align-items: center; margin-top: 50px; margin-bottom: 50px;">
+  <img src="/Users/olenonniboi/Desktop/p3.png" width="400" />
+  <img src="/Users/olenonniboi/Desktop/p4.png" width="400" />
+</div>
+
+<div style="font-size: 1.25em;">
+As part of the infrastructure inversion analysis, it was found that in January 2018, Amazon officially deprecated its legacy SOAP-based MTurk APIs and SDKs, warning that by June 1, 2019, those legacy endpoints would be disabled (AWS 2025). The documentation instructs requesters to “migrate to the latest version” (REST + AWS Signature v4) or risk losing functionality (ibid).  This shift made many requester systems rewrite code, reconfigure integrations, and realign with new naming conventions and authentication mechanisms.  
+The deprecation notice itself is decisive because clients dependent on the old API were given a hard deadline, exposing how requesters already lived in a fragile dependency. This rupture reveals the hidden bridge. The APIs, which are typically invisible, became the site of forced adaptation. Requester tools, dashboards, and automation pipelines that had relied on SOAP now had to switch to REST. In doing so, the migration highlighted: (a) how requester systems are materially tied to Amazon’s infrastructure, (b) how Amazon holds authority to reshape that bridge, and (c) how fragile the requester platform relationship can be under infrastructural reconfigurations.
+</div>
+
+put together a paragragh here 
+
+# Discussion 
+<div style="font-size: 1.25em;">
+Platforms such as AMT, as part of the larger Amazon ecosystem, can enforce their own rules on complementors whenever a regulatory issue arises.
+
+Should the state interfere? If so, to what extent and in what way?
+</div>
+
+add gifs 
+<div style="text-align: center; margin: 40px 0;">
+  <img src="images/monkey.gif" width="400" alt="Monkey listening to music gif" />
+</div>
+
+
+
+# references 
