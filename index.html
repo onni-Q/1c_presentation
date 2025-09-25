@@ -367,13 +367,92 @@ font-family: "American Typewriter", "Courier New", Courier, monospace;
 <h1>Amazon Mturk API Walkthrough</h1>
 <div id="cli-rui-and-api" class="section level3">
 <h3>CLI, RUI, and API</h3>
-<p><sj></p>
+<div id="comparison-why-api-is-the-best" class="section level4">
+<h4>Comparison – Why API is the best</h4>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="20%" />
+<col width="27%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Feature / Tool</strong></th>
+<th><strong>RUI (Requester User Interface)</strong></th>
+<th><strong>CLI (Command Line Interface)</strong></th>
+<th><strong>API (Application Programming Interface)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>What it is</td>
+<td>Web-based UI on MTurk website</td>
+<td>Command-line tool (Python/Java)</td>
+<td>RESTful web service (HTTP-based)</td>
+</tr>
+<tr class="even">
+<td>Skill level</td>
+<td>Beginner-friendly</td>
+<td>Intermediate (terminal + scripts)</td>
+<td>Advanced (coding experience needed)</td>
+</tr>
+<tr class="odd">
+<td>Setup</td>
+<td>No setup needed</td>
+<td>Requires installation &amp; config</td>
+<td>Requires API key, SDK, or manual HTTP</td>
+</tr>
+<tr class="even">
+<td>Task creation</td>
+<td>Manual via form</td>
+<td>Semi-automated (scripts)</td>
+<td><strong>Fully automated</strong></td>
+</tr>
+<tr class="odd">
+<td>Batch size</td>
+<td>Small to moderate</td>
+<td>Moderate to large</td>
+<td><strong>Large-scale</strong></td>
+</tr>
+<tr class="even">
+<td>Worker qualifications</td>
+<td>Point-and-click setup</td>
+<td>Via XML/JSON files</td>
+<td><strong>Full control via code</strong></td>
+</tr>
+<tr class="odd">
+<td>Bonuses &amp; approvals</td>
+<td>Manual</td>
+<td>Batch scripts</td>
+<td><strong>Fully automated</strong></td>
+</tr>
+<tr class="even">
+<td>Monitoring / tracking</td>
+<td>Visual dashboard</td>
+<td>CSV output</td>
+<td>Real-time logs &amp; custom dashboards</td>
+</tr>
+<tr class="odd">
+<td>Integration with other tools</td>
+<td>Low</td>
+<td>Medium (scripts can call external code)</td>
+<td>High (connect to databases, web apps, etc.)</td>
+</tr>
+<tr class="even">
+<td>Best for</td>
+<td>Casual users, small studies</td>
+<td>Researchers with scripting needs</td>
+<td>Power users, data scientists, developers</td>
+</tr>
+</tbody>
+</table>
+<p>sources: <a href="https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMechanicalTurkGettingStartedGuide/NextSteps.html#advanced-functionality">Implementing
+Amazon Mechanical Turk</a>; <a href="https://blog.mturk.com/helpful-tips-for-choosing-the-right-mechanical-turk-interface-d4c2c84d58e9">blog.mturk.com</a></p>
 </div>
-<div id="comparison-why-api-is-the-best" class="section level3">
-<h3>Comparison – Why API is the best</h3>
 </div>
-<div id="what-requesters-can-do-with-mturk-apis" class="section level3">
-<h3>What requesters can do with MTurk APIs</h3>
+<div id="what-requesters-can-do-with-mturk-apis-visualization" class="section level3">
+<h3>What requesters can do with MTurk APIs (Visualization)</h3>
 </div>
 </div>
 <div id="infrastructural-inversion" class="section level1">
