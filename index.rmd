@@ -1,5 +1,5 @@
 ---
-title: "MTurk Technographic Walkthrough and Infrastructure Inversion "
+title: "MTurk Technographic Walkthrough and Infrastructure Inversion (title change to course title)"
 author: "Yelyzaveta Terentieva 13352393 Onni Qi 14558521"
 date: "2025-09-26"
 output: html_document
@@ -14,9 +14,12 @@ body {
 
 # Amazon Mturk API Walkthrough
 
+### Intrduction 
+Amazon Mechanical Turk (AMT) is a well-known example of a multi-sided crowdsourcing platform that acts as a matchmaker, as described by Evans and Schmalensee (2017). It connects requesters, who post microtasks, “small, atomic tasks that workers can complete in their web browser”, with workers who complete them, while Amazon earns a commission on each transaction (AMT 2025).
+
+add screenshots here, for the doc, MTurk interface, side by side
 
 ### CLI, RUI, and API
-
 
 
 #### Comparison -- Why API is the best
@@ -29,8 +32,8 @@ body {
 | Batch size                   | Small to moderate             | Moderate to large                       | **Large-scale**                |
 | Worker qualifications        | Point-and-click setup         | Via XML/JSON files                      | **Full control via code**                       |
 | Bonuses & approvals          | Manual                        | Batch scripts                           | **Fully automated**                             |
-| Monitoring / tracking        | Visual dashboard              | CSV output                              | Real-time logs & custom dashboards          |
-| Integration with other tools | Low                           | Medium (scripts can call external code) | High (connect to databases, web apps, etc.) |
+| Monitoring / tracking        | Visual dashboard              | CSV output                              | **Real-time** logs & custom dashboards          |
+| Integration with other tools | Low                           | Medium  | High (connect to databases, web apps, etc.) |
 | Best for                     | Casual users, small studies   | Researchers with scripting needs        | Power users, data scientists, developers    |
 
 sources: [Implementing Amazon Mechanical Turk](https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMechanicalTurkGettingStartedGuide/NextSteps.html#advanced-functionality); [blog.mturk.com](https://blog.mturk.com/helpful-tips-for-choosing-the-right-mechanical-turk-interface-d4c2c84d58e9) 
@@ -38,8 +41,28 @@ sources: [Implementing Amazon Mechanical Turk](https://docs.aws.amazon.com/AWSMe
 
 ### What requesters can do with MTurk APIs (Visualization) 
 
- 
+## Roadmap Diagram
+
+```mermaid
+graph TD
+  A[Setup] --> B[Development]
+  B --> C[Launch]
+  C --> D[Monitoring]
+  D --> E[Analysis]
+``` 
+
 
 # Infrastructural Inversion 
+warning screenshot, soup to rest 
+
+put together a paragragh here 
 
 # Discussion 
+
+Platforms such as AMT, as part of the larger Amazon ecosystem, can enforce their own rules on complementors whenever a regulatory issue arises.
+
+Should the state interfere? If so, to what extent and in what way?
+
+add gifs 
+
+# references 

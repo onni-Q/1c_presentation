@@ -13,7 +13,7 @@
 
 <meta name="date" content="2025-09-26" />
 
-<title>MTurk Technographic Walkthrough and Infrastructure Inversion</title>
+<title>MTurk Technographic Walkthrough and Infrastructure Inversion (title change to course title)</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -351,7 +351,7 @@ display: none;
 
 
 <h1 class="title toc-ignore">MTurk Technographic Walkthrough and
-Infrastructure Inversion</h1>
+Infrastructure Inversion (title change to course title)</h1>
 <h4 class="author">Yelyzaveta Terentieva 13352393 Onni Qi 14558521</h4>
 <h4 class="date">2025-09-26</h4>
 
@@ -365,6 +365,16 @@ font-family: "American Typewriter", "Courier New", Courier, monospace;
 </style>
 <div id="amazon-mturk-api-walkthrough" class="section level1">
 <h1>Amazon Mturk API Walkthrough</h1>
+<div id="intrduction" class="section level3">
+<h3>Intrduction</h3>
+<p>Amazon Mechanical Turk (AMT) is a well-known example of a multi-sided
+crowdsourcing platform that acts as a matchmaker, as described by Evans
+and Schmalensee (2017). It connects requesters, who post microtasks,
+“small, atomic tasks that workers can complete in their web browser”,
+with workers who complete them, while Amazon earns a commission on each
+transaction (AMT 2025).</p>
+<p>add screenshots here, for the doc, MTurk interface, side by side</p>
+</div>
 <div id="cli-rui-and-api" class="section level3">
 <h3>CLI, RUI, and API</h3>
 <div id="comparison-why-api-is-the-best" class="section level4">
@@ -431,12 +441,12 @@ font-family: "American Typewriter", "Courier New", Courier, monospace;
 <td>Monitoring / tracking</td>
 <td>Visual dashboard</td>
 <td>CSV output</td>
-<td>Real-time logs &amp; custom dashboards</td>
+<td><strong>Real-time</strong> logs &amp; custom dashboards</td>
 </tr>
 <tr class="odd">
 <td>Integration with other tools</td>
 <td>Low</td>
-<td>Medium (scripts can call external code)</td>
+<td>Medium</td>
 <td>High (connect to databases, web apps, etc.)</td>
 </tr>
 <tr class="even">
@@ -454,12 +464,31 @@ Amazon Mechanical Turk</a>; <a href="https://blog.mturk.com/helpful-tips-for-cho
 <div id="what-requesters-can-do-with-mturk-apis-visualization" class="section level3">
 <h3>What requesters can do with MTurk APIs (Visualization)</h3>
 </div>
+<div id="roadmap-diagram" class="section level2">
+<h2>Roadmap Diagram</h2>
+<pre class="mermaid"><code>graph TD
+  A[Setup] --&gt; B[Development]
+  B --&gt; C[Launch]
+  C --&gt; D[Monitoring]
+  D --&gt; E[Analysis]</code></pre>
+</div>
 </div>
 <div id="infrastructural-inversion" class="section level1">
 <h1>Infrastructural Inversion</h1>
+<p>warning screenshot, soup to rest</p>
+<p>put together a paragragh here</p>
 </div>
 <div id="discussion" class="section level1">
 <h1>Discussion</h1>
+<p>Platforms such as AMT, as part of the larger Amazon ecosystem, can
+enforce their own rules on complementors whenever a regulatory issue
+arises.</p>
+<p>Should the state interfere? If so, to what extent and in what
+way?</p>
+<p>add gifs</p>
+</div>
+<div id="references" class="section level1">
+<h1>references</h1>
 </div>
 
 
