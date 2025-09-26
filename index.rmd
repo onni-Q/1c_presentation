@@ -194,6 +194,24 @@ sources: [Implementing Amazon Mechanical Turk](https://docs.aws.amazon.com/AWSMe
 
 ### What requesters can do with MTurk APIs (Table Chart Visualization)
 
+1) Fully Automated Task Creation at Scale 
+Examples: CreateHIT/CreateHITWithHITType
+
+2) Flexibility in Task Design 
+Example: CreateHITWithHITType
+
+3) Precise Worker Qualification Management 
+Examples: CreateQualificationType, AssociateQualificationWithWorker, ListWorkersWithQualificationType. 
+
+4) Fully Automated Quality Control 
+Examples: ApproveAssignment / RejectAssignment, BlockWorker / UnblockWorker, and SendBonus. 
+
+5) Full Management over Workflow 
+Examples: ListHITs, UpdateExpirationForHIT, DeleteHIT, ListAssignmentsForHIT
+
+6) Cost Monitor  
+Example: GetAccountBalance
+
 <style>
   table {
     width: 100%;
