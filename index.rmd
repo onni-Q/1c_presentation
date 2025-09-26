@@ -488,7 +488,7 @@ Amazon Mechanical Turk - Legacy API Reference. n.d.
 Bowker, Geoffrey C., and Susan Leigh Star. 1999. *Sorting Things Out: Classification and Its Consequences*. The MIT Press. https://doi.org/10.7551/mitpress/6352.001.0001.  
 Evan Does AI, dir. 2022. *How to Make Money Online with Amazon Mechanical Turk (2022) - MTurk For Beginners*. 05:30. https://www.youtube.com/watch?v=i5u8LV8mzrc.  
 Evans, David S., and Richard Schmalensee. 2017. ‘Multi-Sided Platforms’. In *The New Palgrave Dictionary of Economics*, edited by Palgrave Macmillan. Palgrave Macmillan UK. https://doi.org/10.1057/978-1-349-95121-5_3069-1.  
-‘GetHIT - Amazon Mechanical Turk’. n.d. Accessed 25 September 2025. https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI-legacy/ApiReference_GetHITOperation.html?utm_source=chatgpt.com.  
+‘GetHIT - Amazon Mechanical Turk’. n.d. Accessed 25 September 2025. https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI-legacy/ApiReference_GetHITOperation.html?  
 Poell, Thomas, David B. Nieborg, and Brooke Erin Duffy. 2022. *Platforms and Cultural Production*. Polity Press.  
 Schall, Daniel. 2012. *Service-Oriented Crowdsourcing: Architecture, Protocols and Algorithms*. SpringerBriefs in Computer Science. Springer New York. https://doi.org/10.1007/978-1-4614-5956-9.  
 Wieringa, Roel, and Jaap Gordijn. 2021. *The Amazon Ecosystem and Its Business Models*. The Value Engineers.  
